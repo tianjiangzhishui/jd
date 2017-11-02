@@ -1,0 +1,62 @@
+
+开发项目
+1:开发流程{工作职位/负责}
+  小../中小/大(100>)
+	中小
+	a:需求分析-->技术经理--(美工)
+	  文档(需求说明书)
+	b:美工--》图片-->切图
+	  小图片
+  c:前端-->html/css/js 静态网页
+	d:后端-->php/mysql   动态网页
+	e:运维-->linux/mysql/redis/ip/www/服务器
+	         动态网页部署服务器
+	f:测试-->功能
+	g:上线
+	i:调试->加新功->升级...
+
+2:分析功能{功能模块}
+  功能模块一:用户登录
+	功能模块二:产品列表显示->分页
+	功能模块三:点击购物商品
+	功能模块四:浏览购物车{删除/+/-}
+
+
+  功能模块一:用户登录
+  1.1
+	依据功能创建库、表、记录
+	创建库:jd
+	创建表:登录表
+	t_login:
+	编号:   id     INT
+	用户名: uname  VARCHAR(20)
+	密  码: upwd   VARCHAR(32)
+	添加三条记录
+  1.2:创建php
+	jd/data/login_do.php
+   a:获取参数 uname/upwd
+	 b:查询数据库
+	   SELECT * FROM t_login
+		 WHERE uname='$uname' AND upwd='$upwd'
+   c:如果用户输入{uname/upwd}
+	 d:-1 -2 -3   1
+
+  1.3:创建js{分析html/css}
+	 a:productlist.html
+	 b:jd/js/productlist.js
+	 c:js
+	   c.1:登录按钮 "提交登录信息" 绑定点击事件
+		     productlist.html     
+				 <div class="modal">  408模态窗口
+         <p class="alert">    412出错信息
+				 id="uname"           416
+				 id="upwd"            417
+				 id="bt-login"        418按钮
+     c.2:获取用户名密码
+		 c.3:发送ajax请求login_do.php
+		 c.4:-1 -2 -3  1
+		 c.5:登录成功->隐藏登录框和半透明背景
+		 c.6:登录失败->提示框{用户名或密码有误}
+	#-------------------------------------------
+
+

@@ -1,0 +1,69 @@
+今天学习的内容
+01:上周京东项目重点小结
+02:今天目标
+   上午: 01:添加购物车
+	       02:显示购物车列表
+				 03:删除购物车选项
+				 04:修改购物车 + -
+   下午:
+	       05:跨域
+				 06:cookie
+				 07:分页
+/-----------------------------
+01:上周京东项目重点回顾
+02:今天目标
+   上午: 01:添加购物车       
+	       02:显示购物车列表   
+				 03:删除购物车选项   中午练习
+				 04:修改购物车 + -   作业
+				 开发项目_006.txt
+   下午:
+	 06:cookie
+	    cookie:小甜饼 
+			cookie:保存客户端浏览器中一个纯文本文件
+			cookie作用:
+			保存:[安全性要求不高]文字或数字数据
+			     登录密码?
+			通用方案:
+			1:用户昵称/用户名/用户编号
+			2:浏览过商品
+			3:大型网站-->用户购物车中数据也保存cookie
+
+      语法:!!!!重点.
+			1:cookie_add.html    保存cookie
+			  document.cookie = '名=值';
+				document.cookie = 'uid=10';
+			2:cookie_read.html   读取cookie
+			  var str = document.cookie;
+			#	
+			var str = "name=tom;age=10;sex=F";
+			var arrStr = str.split(";");
+			["name=tom","age=10","sex=F"]
+      name = arrStr[0].split("=")[0];
+      tom = arrStr[0].split("=")[1];
+
+	 07:分页
+      mysql:
+			SELECT * FROM jd_product LIMIT ?,?
+			? 启动记录行   0
+			? 查询几行记录 
+
+			1:SELECT * FROM jd_product LIMIT 0,8;
+			2:SELECT * FROM jd_product LIMIT 8,8;
+			3:SELECT * FROM jd_product LIMIT 16,8;
+      页数  启始记录
+			1----->0       (页数-1)*8;  (1-1)*8=0
+			2----->8                    (2-1)*8=8
+			3----->16                   (3-1)*8=16
+
+      修改程序
+			1:php
+
+
+
+
+
+	 05:跨域
+
+
+		
